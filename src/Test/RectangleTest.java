@@ -12,11 +12,19 @@ import static org.junit.Assert.*;
 public class RectangleTest {
 
     @Test
-    public void testGetArea() throws Exception{
-        int breadth = 5;
-        int height = 4;
+    public void testArea() throws Exception{
+        double breadth = 5;
+        double height = 4;
         Rectangle rect = new Rectangle(breadth,height);
-        assertEquals(20,rect.getArea());
+        assertTrue(20 == rect.area());
+    }
+
+    @Test
+    public void testPerimeter() throws Exception{
+        double breadth = 5;
+        double height = 4;
+        Rectangle rect = new Rectangle(breadth,height);
+        assertTrue(18 == rect.perimeter());
     }
 
 }
